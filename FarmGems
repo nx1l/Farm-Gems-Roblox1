@@ -82,4 +82,5 @@ local functionInfo = {
 
 for num, i in functionInfo["constants"] do
     print(i)
+    print('sdfdsa')
 end
