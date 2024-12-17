@@ -82,5 +82,15 @@ local functionInfo = {
 
 for num, i in functionInfo["constants"] do
     print(i)
-    print('sdfdsa')
+    local Success, ErrorMsg = pcall(function ()
+        local args = {
+            [1] = "Parents",
+            [2] = {
+                ["source_for_logging"] = "intro_sequence"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").API[i]:InvokeServer(unpack(args))
+    end)
 end
+
